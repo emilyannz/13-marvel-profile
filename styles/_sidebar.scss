@@ -1,0 +1,40 @@
+.sidebar {
+  min-width: 7rem;
+  padding: $gutter;
+}
+
+.sidebar__image {
+  position: relative;
+  width: 100%;
+  border-radius: $brand-border-radius;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    padding-top: 100%;
+    content: '';
+  }
+}
+
+// .sidebar__image-pic {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+// }
+
+.sidebar__title {
+  margin: $gutter 0;
+  font-weight: normal;
+}
+
+.sidebar__creator-list {
+
+  &__heading {
+    margin: $gutter 0;
+    border-bottom: $brand-border;
+    font-family: $brand-font-special;
+  }
+}
