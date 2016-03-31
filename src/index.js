@@ -1,12 +1,12 @@
 'use strict';
 
-import ComicsListView from 'comics-list-view';
 import SeriesInfoView from 'series-info-view';
 import CharacterListView from 'character-list-view';
-const id = #####;
+import ComicsListView from 'comics-list-view';
+const id = 20448;
 
 export default function () {
-  fetch(`http://gateway.marvel.com:80/v1/public/series/9856?apikey=03d447ae0f2abf63a91a516b765da6e5`)
+  fetch(`https://gateway.marvel.com:443/v1/public/series/20448/characters?apikey=e92b6f4f5d1e35d2894877c88ac9710a`)
   .then((response) => response.json())
   .then((info) => {
     // Select profile container
@@ -15,17 +15,17 @@ export default function () {
     const profile = new SeriesInfoView(element, info.data.results[0]);
   });
 
-  fetch(`http://gateway.marvel.com:80/v1/public/series/9856/characters?apikey=03d447ae0f2abf63a91a516b765da6e5`)
+  fetch(`https://gateway.marvel.com:443/v1/public/characters/20448?apikey=e92b6f4f5d1e35d2894877c88ac9710a`)
   .then((response) => response.json())
   .then((info) => {
-    const element = document.querySelector(`.characters`);
+    const element = document.querySelector(`.characters-list`);
     const character = new CharacterListView(element, info.data.results);
   });
 
-  fetch(`http://gateway.marvel.com:80/v1/public/series/9856/comics?apikey=03d447ae0f2abf63a91a516b765da6e5`)
+  fetch(`https://gateway.marvel.com:443/v1/public/series/20448/comics?apikey=e92b6f4f5d1e35d2894877c88ac9710a`)
   .then((response) => response.json())
   .then((info) => {
-    const element = document.querySelector(`.comics`);
+    const element = document.querySelector(`.comics-content`);
     const comic = new ComicListView(element, info.data.results);
   });
 }
