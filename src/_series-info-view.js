@@ -13,7 +13,7 @@ export default class SeriesInfoView {
 
   renderImage() {
     this.element.querySelector(`.sidebar__image`).innerHTML = `
-    <img class="sidebar__image-pic" src="${this.data.thumbnail.path}.${this.data.thumbnail.extension}" alt=""/>`;
+    <img class="sidebar__image-pic" src="${this.data.thumbnail.path}.${this.data.thumbnail.extension}">`;
   }
 
   renderTitle() {
