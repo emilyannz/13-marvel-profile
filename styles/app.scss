@@ -3,11 +3,13 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+@import 'box-sizing';
 @import 'variables';
 @import 'base';
-@import 'box-sizing';
+@import 'modal';
+@import 'header';
+@import 'sidebar';
 @import 'characters';
 @import 'comics';
-@import 'header';
-@import 'modal';
-@import 'sidebar';
+
+@import 'media-queries';

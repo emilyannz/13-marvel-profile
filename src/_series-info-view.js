@@ -12,23 +12,24 @@ export default class SeriesInfoView {
   }
 
   renderImage() {
-    this.element.querySelector(`.sidebar__image`).innerHTML = `
-    <img class="sidebar__image-pic" src="${this.data.thumbnail.path}.${this.data.thumbnail.extension}">`;
+    this.element.querySelector(`.profile-pic`).innerHTML = `
+      <img class="profile-pic--image" src="${this.data.thumbnail.path}.${this.data.thumbnail.extension}" alt=""/>
+    `;
   }
 
   renderTitle() {
-    this.element.querySelector(`.sidebar__title`).innerText = this.data.title;
+    this.element.querySelector(`.profile-title`).innerText = this.data.title;
   }
 
   renderYears() {
-    this.element.querySelector(`.sidebar__years`).innerText = `${this.data.startYear} - ${this.data.endYear}`;
+    this.element.querySelector(`.profile-years`).innerText = `${this.data.startYear} - ${this.data.endYear}`;
   }
 
   renderCreators() {
-    this.data.creators.items.forEach((character) => {
+    this.data.creators.items.forEach((creator) => {
       const newListItem = document.createElement(`li`);
-      newListItem.innerText = character.name;
-      this.element.querySelector(`.character__list`).appendChild(newListItem);
+      newListItem.innerText = creator.name;
+      this.element.querySelector(`.creator-list`).appendChild(newListItem);
     });
   }
 }

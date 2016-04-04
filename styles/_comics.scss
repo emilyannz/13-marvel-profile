@@ -1,26 +1,25 @@
+
 .comics {
 
-  &__list {
+  &-list {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.comics__title {
+.comics-title {
   margin: 0 $gutter;
   border-bottom: $brand-border;
   font-family: $brand-font-special;
 }
 
 .comic-item {
-  flex-grow: 1;
-  width: calc(100% / 4 - 2rem);
-  min-width: 7rem;
+  flex: 1 1 6rem;
   margin: $gutter;
 }
 
 
-.comic__image--container {
+.comic-image--container {
   position: relative;
   width: 100%;
   border-radius: $brand-border-radius;
@@ -46,7 +45,7 @@
   margin: $gutter 0;
 }
 
-.comic__title {
+.comic-title {
   height: 2.3rem;
   margin: $gutter 0;
   overflow: hidden;
@@ -59,4 +58,4 @@
   border-radius: $brand-border-radius;
   background: $brand-navy;
   color: $brand-white;
-}
+  cursor: pointer;

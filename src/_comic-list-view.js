@@ -12,7 +12,7 @@ export default class ComicListView {
   renderComicList() {
     this.data.forEach((result) => {
       const comicView = new ComicView(result);
-      const resultList = this.element.querySelector(`.comics__list`);
+      const resultList = this.element.querySelector(`.comics-list`);
       resultList.appendChild(comicView.element);
     });
   }

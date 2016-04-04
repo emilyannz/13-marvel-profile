@@ -10,20 +10,21 @@ export default class ComicView {
   }
 
   renderComicView() {
-    this.element.classList.add(`comic__item`);
+    this.element.classList.add(`comic-item`);
     this.element.innerHTML = `
-      <div class="comic__image--container">
-        <img class="comic__image" src="${this.result.thumbnail.path}.\
-        ${this.result.thumbnail.extension}">
+      <div class="comic-image--container">
+        <img class="comic-image"
+        src="${this.result.thumbnail.path}.${this.result.thumbnail.extension}">
       </div>
       <div class="comic-issue"># ${this.result.issueNumber}</div>
       <div class="comic-title">${this.result.title}</div>
-      <div id="modal" class="modal__active modal">
-        <div class="modal__container">
+      <div id="modal" class="modal--active modal">
+        <div class="modal-container">
           <div class="modal__close">
-            <p class="modal__close--button">x</p>
+            <p class="modal__close--button">x close</p>
           </div>
           <div class="modal__content">
+            <p class="modal__content--title">${this.result.title}</p>
             <p class="modal__content">${this.result.description}</p>
           </div>
         </div>
@@ -34,8 +35,12 @@ export default class ComicView {
 
   triggerModal() {
     const button = this.element.querySelector(`button`);
+    const close = this.element.querySelector(`.modal__close--button`);
     const modal = this.element.querySelector(`#modal`);
     button.addEventListener(`click`, () => {
+      modal.classList.toggle(`modal`);
+    });
+    close.addEventListener(`click`, () => {
       modal.classList.toggle(`modal`);
     });
   }
