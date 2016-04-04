@@ -11,7 +11,7 @@ export default class CharacterListView {
   renderCharacterList() {
     this.data.forEach((result) => {
       const characterView = new CharacterView(result);
-      const resultList = this.element.querySelector(`.characters-list`);
+      const resultList = this.element.querySelector(`.characters__list`);
       resultList.appendChild(characterView.element);
     });
   }
