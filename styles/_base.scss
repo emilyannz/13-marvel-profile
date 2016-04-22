@@ -1,29 +1,19 @@
 body {
-  min-height: 100vh;
   margin: 0;
-  font-family: sans-serif;
-  color: $brand-dark-gray;
+  font-family: 'Marvel', sans-serif;
+  color: $brand-grey;
+  // background
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
+ul {
   list-style: none;
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
-  overflow: auto;
+a {
+  text-transform: none;
 }
 
-.container {
-  max-width: $container-width;
-  margin: auto;
-}
-
-.page {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: $gutter;
-}
+// h1, h2, h3, h4 {
+//   margin: 0;
+//   overflow: auto;
+// }
