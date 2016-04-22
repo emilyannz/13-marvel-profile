@@ -1,5 +1,4 @@
 'use strict';
-import setSeries from 'setSeries';
 
 export default class CharacterView {
   constructor(characterProfile) {
