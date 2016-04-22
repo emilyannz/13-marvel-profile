@@ -1,0 +1,16 @@
+.outside-container {
+  width: $container-width;
+  margin: 2rem auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 2.5rem;
+}
