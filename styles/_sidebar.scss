@@ -1,13 +1,11 @@
 .sidebar {
-  flex: 1 0 20rem;
-  min-width: 16rem;
-  padding: $gutter;
+  width: 30%;
 }
 
-.profile-pic {
+.sidebar-image-container {
   position: relative;
   width: 100%;
-  border-radius: $brand-border-radius;
+  border-radius: $gutter;
   overflow: hidden;
 
   &:before {
@@ -15,9 +13,8 @@
     padding-top: 100%;
     content: '';
   }
-}
 
-.profile-pic--image {
+    &__picture {
   position: absolute;
   top: 0;
   right: 0;
@@ -26,15 +23,24 @@
   width: 100%;
 }
 
-.profile-title {
-  margin: $gutter 0;
-  font-weight: normal;
-}
+.sidebar-profile {
+  margin: 0;
+  padding: $gutter 0;
 
-.creator-list {
-  &__heading {
-    margin: $gutter 0;
+  &__name {
+    margin: 0;
+    padding: $gutter 0;
+  }
+
+  &__year {
+    margin: 0;
+    padding: $gutter 0;
+    color: $brand-light-grey;
+  }
+
+  &__creators {
+    margin: 0;
+    padding: $gutter 0 0;
     border-bottom: $brand-border;
-    font-family: $brand-font-special;
   }
 }
