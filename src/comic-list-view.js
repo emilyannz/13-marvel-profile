@@ -6,14 +6,11 @@ export default class ComicListView {
   constructor(element, data) {
     this.element = element;
     this.data = data;
-    this.renderComicList();
   }
 
-  renderComicList() {
-    this.data.forEach((result) => {
-      const comicView = new ComicView(result);
-      const resultList = this.element.querySelector(`.comics-list`);
-      resultList.appendChild(comicView.element);
+    this.data.forEach((comic) => {
+      const comView = new ComicView(comic);
+      resultList.appendChild(comView.element);
     });
   }
 }
