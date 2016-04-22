@@ -19,7 +19,6 @@ export default class ComicView {
       <div class="comics-profile__details">
       <h3 class="comics-profile__details__name">${comicProfile.title}</h3>
       </div>
-
       <button class="comics-profile__button">Read More</button>
 
       <div class="modal">
@@ -27,8 +26,7 @@ export default class ComicView {
         <i class="fa fa-times modal-escape"></i>
         <p class="modal-title">${this.comicProfile.title}</p>
         <p class="modal-description">${this.comicProfile.description}</p>
-      </div>
-
+      </div>`;
 
     const modal = this.element.querySelector(`.modal`);
     const modalActive = this.element.querySelector(`.modal-active`);
@@ -43,24 +41,24 @@ export default class ComicView {
 }
 
 
-`
-//     ${this.result.title}</div>
-//     <div id="modal" class="modal--active modal">
-//       <div class="modal-container">
-//         <div class="modal__close">
-//           <p class="modal__close--button">x close</p>
-//         </div>
-//         <div class="modal__content">
-//           <p class="modal__content--title">${this.result.title}</p>
-//           <p class="modal__content">${this.result.description}</p>
-//         </div>
-//       </div>
-//     </div>
-//     <button class="comics-profile__button">Read More</button>
-//       triggerModal() {
-//         const button = this.element.querySelector(`button`);
-//         const close = this.element.querySelector(`.modal__close--button`);
-//         close.addEventListener(`click`, () => {
-//           modal.classList.toggle(`modal`);
-//         });
-//       }`
+
+    // ${this.result.title}</div>
+    // <div id="modal" class="modal--active modal">
+    //   <div class="modal-container">
+    //     <div class="modal__close">
+    //       <p class="modal__close--button">x close</p>
+    //     </div>
+    //     <div class="modal__content">
+    //       <p class="modal__content--title">${this.result.title}</p>
+    //       <p class="modal__content">${this.result.description}</p>
+    //     </div>
+    //   </div>
+    // </div>
+    // <button class="comics-profile__button">Read More</button>
+    //   triggerModal() {
+    //     const button = this.element.querySelector(`button`);
+    //     const close = this.element.querySelector(`.modal__close--button`);
+    //     close.addEventListener(`click`, () => {
+    //       modal.classList.toggle(`modal`);
+    //     });
+    //   }
