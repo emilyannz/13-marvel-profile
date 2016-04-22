@@ -1,62 +1,89 @@
 
 .comics {
+  display: flex;
+  flex-direction: column;
 
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
+  &__heading {
+  margin-top: 0;
+  border-bottom: $brand-border;
   }
 }
 
-.comics-title {
-  margin: 0 $gutter;
-  border-bottom: $brand-border;
-  font-family: $brand-font-special;
+.comics-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap; wrap;
+  padding-left: $gutter;
 }
 
-.comic-item {
-  flex: 1 1 6rem;
-  margin: $gutter;
+.comics-profile {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ width: calc(100% / 4 - #{$gutter});
+ padding: 0 $gutter $gutter * 4;
 }
 
-
-.comic-image--container {
+  &__image {
   position: relative;
   width: 100%;
-  border-radius: $brand-border-radius;
+  border-radius: $gutter;
   overflow: hidden;
 
-  &:before {
-    display: block;
-    padding-top: 100%;
-    content: '';
+ &:before {
+   display: block;
+   padding-top: 100%;
+   content: '';
+ }
+
+    &__avatar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
   }
-}
 
-.comic-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+  &__issue {
+    margin: 0;
+    padding-left: $gutter;
 
-.comic-issue {
-  margin: $gutter 0;
-}
+    &-number {
+      margin: 0;
+      padding: $gutter 0 0 $gutter;
+    }
+  }
 
-.comic-title {
-  height: 2.3rem;
-  margin: $gutter 0;
-  overflow: hidden;
-}
+    &__details {
+      padding: 0 $gutter;
 
-.comic-description__button {
-  width: 100%;
-  padding: $gutter / 2 0;
-  border: 0;
-  border-radius: $brand-border-radius;
-  background: $brand-navy;
-  color: $brand-white;
-  cursor: pointer;
-}
+      &__name {
+        margin: 0;
+        padding: 0 0 $gutter $gutter;
+      }
+
+      &__year {
+        margin: 0;
+        padding: $gutter;
+      }
+    }
+
+    &__button {
+      align-self: center;
+      width: 100%;
+      margin-top: $gutter;
+      padding: $gutter;
+      border: 0;
+      border-radius: $gutter;
+      outline: 0;
+      background: $brand-teal;
+      color: $brand-grey;
+
+      &:hover {
+        color: $brand-red;
+        cursor: pointer;
+      }
+    }
+  }
