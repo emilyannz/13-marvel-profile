@@ -2,7 +2,7 @@
 
 export default class ComicView {
   constructor(comicProfile) {
-    this.comicItem = comicProfile;
+    this.comicProfile = comicProfile;
     this.element = document.createElement(`li`);
     this.element.classList.add(`comics-profile`);
 
@@ -13,12 +13,13 @@ export default class ComicView {
      </div>
 
       <div class="comics-profile__series">
-      <h3 class="comics-profile__series-number">#${comicProfile.seriesNumber}<h3>
+      <h3 class="comics-profile__series-number">#${comicProfile.seriesNumber}</h3>
       </div>
 
       <div class="comics-profile__info">
       <h3 class="comics-profile__info__name">${comicProfile.title}</h3>
       </div>
+
       <button class="comics-profile__button">Read More</button>
 
       <div class="modal">
@@ -26,6 +27,7 @@ export default class ComicView {
         <i class="fa fa-times modal-escape"></i>
         <p class="modal-title">${this.comicProfile.title}</p>
         <p class="modal-description">${this.comicProfile.description}</p>
+      </div>
       </div>`;
 
     const modal = this.element.querySelector(`.modal`);
@@ -36,6 +38,7 @@ export default class ComicView {
     });
 
     this.element.querySelector(`.modal-escape`).addEventListener(`click`, () => {
-    modal.classList.remove(`modal-active`);
-  });
+      modal.classList.remove(`modal-active`);
+    });
+  }
 }

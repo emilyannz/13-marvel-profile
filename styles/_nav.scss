@@ -4,8 +4,8 @@
 }
 
 .nav-container__title {
-  width: $container-width;
+  width: $max-container-width;
   margin: auto;
   padding: $gutter * 3 0;
-  color: $brand-grey;
+  // color: $brand-grey;
 }

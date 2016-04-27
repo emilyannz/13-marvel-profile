@@ -7,7 +7,7 @@ export default class SidebarView {
     this.creatorList();
 
     const imageUrl = `${data.thumbnail.path}.${data.thumbnail.extension}`;
-    this.element.querySelector(`.img-container__pic`).src = imageUrl;
+    this.element.querySelector(`.sidebar-image-container__picture`).src = imageUrl;
     this.element.querySelector(`.sidebar-profile__name`).innerText = data.title;
     this.element.querySelector(`.sidebar-profile__year`).innerText =
      `${data.startYear} - ${data.endYear}`;

@@ -11,7 +11,7 @@
   &-active {
   display: flex;
   }
-}
+
 
 .modal-card {
   display: flex;
@@ -20,8 +20,8 @@
   max-width: 60rem;
   margin: auto;
   border-radius: 0.5rem;
-  background: $brand-grey;
-  color: $brand-light-grey;
+  // background: $brand-grey;
+  color: $brand-white;
   z-index: 1;
 }
 
