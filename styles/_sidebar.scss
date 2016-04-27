@@ -14,15 +14,17 @@
     content: '';
   }
 
-    &__picture {
-      position: absolute;
-      // top: 0;
-      // right: 0;
-      // bottom: 0;
-      // left: 0;
-      margin: 0 0 0 0;
-      width: 100%;
+  &__picture {
+    position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    margin: 0 0 0 0;
+    width: 100%;
+  }
 }
+
 
 .sidebar-profile {
   margin: 0;
@@ -40,6 +42,18 @@
   }
 
   &__creators {
-    padding: 0;
+    margin: 0;
+    padding: $gutter 0 0;
+    border-bottom: $brand-border;
   }
 }
+
+
+// .creators {
+//   padding: 0;
+//
+//   &__list-items {
+//     padding: $gutter / 2 0;
+//   }
+// }
+// }
