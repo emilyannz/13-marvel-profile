@@ -7,17 +7,17 @@ export default class ComicView {
     this.element.classList.add(`comics-profile`);
 
     this.element.innerHTML = `
-      <div class="comics-profile__image">
-        <img class="comics-profile__image__avatar" src=
+      <div class="comics-profile__photo">
+        <img class="comics-profile__photo__thumbnail" src=
         "${comicProfile.thumbnail.path}.${comicProfile.thumbnail.extension}" alt="" />
      </div>
 
-      <div class="comics-profile__issue">
-      <h3 class="comics-profile__issue-number">#${comicProfile.issueNumber}<h3>
+      <div class="comics-profile__series">
+      <h3 class="comics-profile__series-number">#${comicProfile.seriesNumber}<h3>
       </div>
 
-      <div class="comics-profile__details">
-      <h3 class="comics-profile__details__name">${comicProfile.title}</h3>
+      <div class="comics-profile__info">
+      <h3 class="comics-profile__info__name">${comicProfile.title}</h3>
       </div>
       <button class="comics-profile__button">Read More</button>
 
@@ -39,26 +39,3 @@ export default class ComicView {
     modal.classList.remove(`modal-active`);
   });
 }
-
-
-
-    // ${this.result.title}</div>
-    // <div id="modal" class="modal--active modal">
-    //   <div class="modal-container">
-    //     <div class="modal__close">
-    //       <p class="modal__close--button">x close</p>
-    //     </div>
-    //     <div class="modal__content">
-    //       <p class="modal__content--title">${this.result.title}</p>
-    //       <p class="modal__content">${this.result.description}</p>
-    //     </div>
-    //   </div>
-    // </div>
-    // <button class="comics-profile__button">Read More</button>
-    //   triggerModal() {
-    //     const button = this.element.querySelector(`button`);
-    //     const close = this.element.querySelector(`.modal__close--button`);
-    //     close.addEventListener(`click`, () => {
-    //       modal.classList.toggle(`modal`);
-    //     });
-    //   }
