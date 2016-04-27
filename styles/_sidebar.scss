@@ -15,12 +15,13 @@
   }
 
     &__picture {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+      position: absolute;
+      // top: 0;
+      // right: 0;
+      // bottom: 0;
+      // left: 0;
+      margin: 0 0 0 0;
+      width: 100%;
 }
 
 .sidebar-profile {
@@ -35,12 +36,10 @@
   &__year {
     margin: 0;
     padding: $gutter 0;
-    color: $brand-light-grey;
+    color: $brand-grey;
   }
 
   &__creators {
-    margin: 0;
-    padding: $gutter 0 0;
-    border-bottom: $brand-border;
+    padding: 0;
   }
 }

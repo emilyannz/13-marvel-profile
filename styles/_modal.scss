@@ -11,6 +11,7 @@
   &-active {
   display: flex;
   }
+}
 
 .modal-card {
   display: flex;
@@ -27,7 +28,7 @@
 .modal-escape {
   align-self: flex-end;
   padding: $gutter;
-  color: $brand-orange;
+  color: $brand-lime;
   font-size: 1.5rem;
   cursor: pointer;
 

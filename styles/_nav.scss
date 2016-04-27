@@ -1,11 +1,11 @@
 .nav-container {
   width: 100%;
-  background: $brand-grey;
+  background: $brand-light-blue;
 }
 
 .nav-container__title {
-  width: $max-content-width;
+  width: $container-width;
   margin: auto;
   padding: $gutter * 3 0;
-  color: $brand-orange;
+  color: $brand-grey;
 }
