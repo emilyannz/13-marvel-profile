@@ -1,11 +1,13 @@
 .sidebar {
-  width: 30%;
+  flex: 1 0 20rem;
+  min-width: 16rem;
+  padding: $gutter;
 }
 
-.sidebar-image-container {
+.profile-pic {
   position: relative;
   width: 100%;
-  border-radius: $gutter;
+  border-radius: $brand-border-radius;
   overflow: hidden;
 
   &:before {
@@ -13,47 +15,27 @@
     padding-top: 100%;
     content: '';
   }
-
-  &__picture {
-    position: absolute;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    margin: 0 0 0 0;
-    width: 100%;
-  }
 }
 
+.profile-pic--image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
-.sidebar-profile {
-  margin: 0;
-  padding: $gutter 0;
+.profile-title {
+  margin: $gutter 0;
+  font-weight: normal;
+}
 
-  &__name {
-    margin: 0;
-    padding: $gutter 0;
-  }
+.creator-list {
 
-  &__year {
-    margin: 0;
-    padding: $gutter 0;
-    // color: $brand-grey;
-  }
-
-  &__creators {
-    margin: 0;
-    padding: $gutter 0 0;
+  &__heading {
+    margin: $gutter 0;
     border-bottom: $brand-border;
+    font-family: $brand-font-special;
   }
 }
-
-
-// .creators {
-//   padding: 0;
-//
-//   &__list-items {
-//     padding: $gutter / 2 0;
-//   }
-// }
-// }
