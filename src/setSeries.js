@@ -3,7 +3,7 @@
 import SeriesInfoView from 'series-info-view';
 import CharacterListView from 'character-list-view';
 
-export default function (id = `9856`) {
+export default function (id = `20448`) {
   fetch(`http://gateway.marvel.com:80/v1/public/series/${id}?apikey=03d447ae0f2abf63a91a516b765da6e5`)
   .then((response) => response.json())
   .then((info) => {
