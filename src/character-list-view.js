@@ -5,10 +5,14 @@ export default class CharacterListView {
   constructor(element, data) {
     this.element = element;
     this.data = data;
+    this.renderCharacterList();
+  }
 
-    this.data.forEach((character) => {
-      const characterView = new CharacterView(character);
-      this.element.appendChild(characterView.element);
+  renderCharacterList() {}
+    this.data.forEach((result) => {
+      const characterView = new CharacterView(result);
+      const resultList = this.element.querySelector(`.characters-list`);
+      resultList.appendChild(characterView.element);
     });
   }
 }
