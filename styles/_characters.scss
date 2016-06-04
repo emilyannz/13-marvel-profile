@@ -1,31 +1,31 @@
-.characters {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $gutter * 2;
+.main {
+  flex: 4 1 30rem;
+  padding: $gutter;
+}
 
-  &__title {
-    margin-top: 0;
-    border-bottom: $brand-border;
+.characters {
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.character-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: $gutter;
+.character-item {
+  flex: 1 1 6rem;
+  margin: $gutter;
 }
 
-.characters-bio {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% / 4 - #{$gutter});
-  padding: 0 $gutter * 2;
+.characters-title {
+  margin: 0 $gutter;
+  border-bottom: $brand-border;
+  font-family: $brand-font-special;
+}
 
-  &__photo {
+.character-image--container {
   position: relative;
   width: 100%;
-  border-radius: $gutter;
+  border-radius: $brand-border-radius;
   overflow: hidden;
 
   &:before {
@@ -33,20 +33,17 @@
     padding-top: 100%;
     content: '';
   }
+}
 
-  &__thumbnail {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.character-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
-    width: 100%;
-    }
-  }
-
-  &__name {
-    margin: 0;
-    padding: $gutter;
-  }
+.character-title {
+  margin: $gutter 0;
 }
