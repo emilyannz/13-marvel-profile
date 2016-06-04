@@ -1,15 +1,35 @@
 'use strict';
 
 export default class CharacterView {
-  constructor(characterProfile) {
-    this.characterProfile = characterProfile;
+  constructor(result) {
+    this.result = result;
     this.element = document.createElement(`li`);
-    this.element.classlist.add(`characters-bio`);
 
+    this.renderCharacterView();
+    this.switchSeries();
+  }
+
+  renderCharacterView() {
+    this.element.classList.add(`character-item`);
     this.element.innerHTML = `
-      <div class="characters-bio__photo">
-        <img src="${characterProfile.thumbnail.path}.${characterProfile.thumbnail.extension}" class="characters-bio__photo__thumbnail">
+      <div class="character-image--container">
+        <img class="character-image"
+        src="${this.result.thumbnail.path}.${this.result.thumbnail.extension}">
       </div>
-      <h3 class="characters-bio__name">${characterProfile.name}</h3>`;
+      <div class="character-title">${this.result.name}</div>
+    `;
+  }
+
+  switchSeries() {
+    // get series id for current character
+    const seriesParts = this.result.series.items[0].resourceURI.split(`/`);
+    const seriesId = seriesParts[seriesParts.length - 1];
+    // click event listener
+    const clickArea = this.element.querySelector(`.character-image--container`);
+    clickArea.addEventListener(`click`, () => {
+      // console.log(`want to update to id`, seriesId)
+      setSeries(seriesId);
+      // update character id number in fetch request in index.js file
+    });
   }
 }
