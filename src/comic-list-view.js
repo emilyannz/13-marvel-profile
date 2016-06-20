@@ -11,9 +11,9 @@ export default class ComicListView {
 
   renderComicList() {
     this.data.forEach((result) => {
-      const comView = new ComicView(result);
+      const comicView = new ComicView(result);
       const resultList = this.element.querySelector(`.comics-list`);
-      resultList.appendChild(comView.element);
+      resultList.appendChild(comicView.element);
     });
   }
 }
