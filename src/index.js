@@ -3,7 +3,7 @@
 import setSeries from 'setSeries';
 import CharacterListView from 'character-list-view';
 import ComicListView from 'comic-list-view';
-const id = 20448;
+const id = `20448`;
 
 export default function () {
   setSeries();
@@ -28,5 +28,5 @@ export default function () {
     .then((info) => {
       const element = document.querySelector(`.comics`);
       const comic = new ComicListView(element, info.data.results);
-  });
+    });
 }
